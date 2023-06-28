@@ -1,0 +1,6 @@
+/build
+/dist
+/fonttest.spec
+/test.py
+/venv
+/__pycache__
