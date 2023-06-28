@@ -1,0 +1,4442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>540</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>540</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>설정</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/myicon/icons/setting.png</normaloff>:/myicon/icons/setting.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QToolTip {
+	color: #f6f6f6;
+	background-color: rgba(27, 29, 35, 160);
+	border: 1px solid rgb(40, 40, 40);
+	border-radius: 2px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color:#2C313C;</string>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>901</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QFrame" name="top_frame">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:#1E1F23;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QWidget" name="horizontalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>901</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="top_layout">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="minimize_btn">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/myicon/icons/minimize.png</normaloff>:/myicon/icons/minimize.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="exit_btn">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resource.qrc">
+             <normaloff>:/myicon/icons/exit.png</normaloff>:/myicon/icons/exit.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="main">
+       <property name="styleSheet">
+        <string notr="true">background-color:transparent;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>881</width>
+          <height>458</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>SUIT ExtraBold</family>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTabWidget::pane{
+	backgroud: transparent;
+	 border-top: 1px solid #F6F6F6;
+}
+
+
+/* Style the tab using the tab sub-control. Note that
+    it reads QTabBar _not_ QTabWidget */
+QTabBar::tab {
+    background: #2C313C;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    min-width: 8ex;
+    padding: 4px;
+	color: #f4f4f4;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+	 background: #1B1D23;
+}
+
+
+QTabBar::tab:!selected {
+    margin-top: 5px; /* make non-selected tabs look smaller */
+}
+
+</string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <widget class="QWidget" name="explain">
+         <attribute name="icon">
+          <iconset>
+           <normaloff>icons/setting_g.png</normaloff>icons/setting_g.png</iconset>
+         </attribute>
+         <attribute name="title">
+          <string>  설명</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_15">
+          <item>
+           <widget class="QFrame" name="frame">
+            <property name="minimumSize">
+             <size>
+              <width>721</width>
+              <height>401</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #f6f6f6</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QLabel" name="explain_header">
+               <property name="font">
+                <font>
+                 <family>SUIT SemiBold</family>
+                 <pointsize>28</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>ArrowCursor</cursorShape>
+               </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;설명&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QScrollArea" name="scrollArea">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>335</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QScrollArea{
+	border: 0pt;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: #343B48;
+	border-radius: 5px;
+}
+
+QScrollBar:vertical {
+	background:  #343B48;
+	width:10px;    
+    margin: 0px;
+	border-radius: 5px;
+
+}
+
+ QScrollBar::handle:vertical {         
+	min-height: 0px;
+	border-radius: 5px;
+	background-color: #2e7ac6;
+}
+
+QScrollBar::add-line:vertical {       
+	height: 0px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+	border-radius: 5px;
+}
+
+QScrollBar::sub-line:vertical {
+	height: 0 px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+	border-radius: 5px;
+}</string>
+               </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="widgetResizable">
+                <bool>true</bool>
+               </property>
+               <widget class="QWidget" name="scrollAreaWidgetContents">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>-765</y>
+                  <width>843</width>
+                  <height>1220</height>
+                 </rect>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_3">
+                 <item>
+                  <widget class="QLabel" name="label_2">
+                   <property name="font">
+                    <font>
+                     <family>SUIT SemiBold</family>
+                     <pointsize>28</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="cursor">
+                    <cursorShape>ArrowCursor</cursorShape>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                   </property>
+                   <property name="text">
+                    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SUIT SemiBold'; font-size:28pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;안녕하세요&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;다운로드 받은 파일 중 바로가기 파일을 편한 위치에 옮겨 사용할 수 있습니다.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#f6f6f6;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;두 가지 실행파일 모두&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;기본 조작은 &amp;quot;F4&amp;quot;키&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;클릭 변경은 &amp;quot;home&amp;quot;키&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;종료는 &amp;quot;esc&amp;quot;키&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;로 기본 할당 되어있습니다.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#f6f6f6;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="Line" name="line_2">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(246, 246, 246);
+</string>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Plain</enum>
+                   </property>
+                   <property name="lineWidth">
+                    <number>1</number>
+                   </property>
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_3">
+                   <property name="font">
+                    <font>
+                     <family>SUIT SemiBold</family>
+                     <pointsize>28</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="cursor">
+                    <cursorShape>ArrowCursor</cursorShape>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;상단의 탭을 눌러 몇가지 설정을 할 수 있습니다.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;설정 후에는 꼭 저장 버튼을 누르고 종료해주시고&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;스캔프로그램을 재시작하면 변경한 설정값이 반영됩니다.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;만약 기존 저장된 설정값으로 돌아가고 싶은 경우,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;&amp;quot;기본값 &amp;quot;버튼을 누르시면 됩니다.&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="Line" name="line_3">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(246, 246, 246);
+</string>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Plain</enum>
+                   </property>
+                   <property name="lineWidth">
+                    <number>1</number>
+                   </property>
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_4">
+                   <property name="font">
+                    <font>
+                     <family>SUIT SemiBold</family>
+                     <pointsize>28</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="cursor">
+                    <cursorShape>ArrowCursor</cursorShape>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;마우스 커서의 크기를 조절하면 원형스캔을 사용하기 편해집니다.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;해당 설정은&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;1. 윈도우키(검색창)&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;2. '마우스 포인터 크기' 이동 &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-weight:400; font-style:italic; color:#f6f6f6;&quot;&gt;(window10은 &amp;quot;마우스 포인터 크기 변경&amp;quot;)&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;3. 크기 조절&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#f6f6f6;&quot;&gt;로 가능합니다.&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="rotate_scan">
+         <attribute name="icon">
+          <iconset>
+           <normaloff>icons/rs_g.png</normaloff>icons/rs_g.png</iconset>
+         </attribute>
+         <attribute name="title">
+          <string>  원형스캔</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_14">
+          <item>
+           <widget class="QFrame" name="rotate_scan_frame">
+            <property name="minimumSize">
+             <size>
+              <width>721</width>
+              <height>401</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #f6f6f6</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <widget class="QLabel" name="rs_header">
+               <property name="font">
+                <font>
+                 <family>SUIT SemiBold</family>
+                 <pointsize>28</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>ArrowCursor</cursorShape>
+               </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;원형스캔&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QScrollArea" name="scrollArea_rs">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>335</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QScrollArea{
+	border: 0pt;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: #343B48;
+	border-radius: 5px;
+}
+
+QScrollBar:vertical {
+	background:  #343B48;
+	width:10px;    
+    margin: 0px;
+	border-radius: 5px;
+
+}
+
+ QScrollBar::handle:vertical {         
+	min-height: 0px;
+	border-radius: 5px;
+	background-color: #2e7ac6;
+}
+
+QScrollBar::add-line:vertical {       
+	height: 0px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+	border-radius: 5px;
+}
+
+QScrollBar::sub-line:vertical {
+	height: 0 px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+	border-radius: 5px;
+}</string>
+               </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="widgetResizable">
+                <bool>true</bool>
+               </property>
+               <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>843</width>
+                  <height>821</height>
+                 </rect>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_8">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_13">
+                     <item>
+                      <widget class="QLabel" name="label_6">
+                       <property name="minimumSize">
+                        <size>
+                         <width>120</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>동작방식</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_7">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>반응할 스위치의 동작</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_3">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_14">
+                       <item>
+                        <widget class="QRadioButton" name="rs_switch_press">
+                         <property name="font">
+                          <font>
+                           <family>SUIT Light</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>스위치를 누를 때</string>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>16</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                         <property name="checked">
+                          <bool>true</bool>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QRadioButton" name="rs_switch_release">
+                         <property name="font">
+                          <font>
+                           <family>SUIT Light</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>스위치를 뗄 때</string>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>16</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_19">
+                     <item>
+                      <widget class="QLabel" name="label_12">
+                       <property name="minimumSize">
+                        <size>
+                         <width>120</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>회전시간</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_13">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>한 번 회전하는 시간 (기본 약 2초)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_6">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_20">
+                       <item>
+                        <widget class="QSpinBox" name="rs_rotate_wait">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QSpinBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}</string>
+                         </property>
+                         <property name="suffix">
+                          <string> 초</string>
+                         </property>
+                         <property name="minimum">
+                          <number>2</number>
+                         </property>
+                         <property name="maximum">
+                          <number>30</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_21">
+                     <item>
+                      <widget class="QLabel" name="label_14">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>이동속도</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_22">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>선을 따라 움직이는 커서의 속도</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_7">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_22">
+                       <item>
+                        <widget class="QComboBox" name="rs_move_wait">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    width: 15px;
+	heigt: 15px;
+	image: url(:/myicon/icons/arrow.png);
+}</string>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>10</width>
+                           <height>11</height>
+                          </size>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>아주 빠르게</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>빠르게</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>천천히</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>아주 천천히</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_23">
+                     <item>
+                      <widget class="QLabel" name="label_23">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>회전횟수</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_24">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>회전 횟수 (0은 무한)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_8">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_24">
+                       <item>
+                        <widget class="QSpinBox" name="rs_rotate_time">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QSpinBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}</string>
+                         </property>
+                         <property name="suffix">
+                          <string> 번</string>
+                         </property>
+                         <property name="minimum">
+                          <number>0</number>
+                         </property>
+                         <property name="maximum">
+                          <number>30</number>
+                         </property>
+                         <property name="value">
+                          <number>3</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_27">
+                     <item>
+                      <widget class="QLabel" name="label_27">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>이동횟수</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_28">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>선을 따라 움직이는 횟수 (0은 무한)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_10">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_28">
+                       <item>
+                        <widget class="QSpinBox" name="rs_move_time">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QSpinBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}</string>
+                         </property>
+                         <property name="suffix">
+                          <string> 번</string>
+                         </property>
+                         <property name="minimum">
+                          <number>0</number>
+                         </property>
+                         <property name="maximum">
+                          <number>30</number>
+                         </property>
+                         <property name="value">
+                          <number>4</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="Line" name="line_4">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame{
+	color: #f6f6f6;
+}</string>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
+                     </property>
+                     <property name="lineWidth">
+                      <number>10</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_33">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>SUIT SemiBold</family>
+                       <pointsize>16</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;선 스타일&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_29">
+                     <item>
+                      <widget class="QLabel" name="label_29">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>일반클릭 선</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_30">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>한 번만 클릭하는 선 (실선)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_11">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_30">
+                       <item>
+                        <widget class="QPushButton" name="rs_color">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="autoFillBackground">
+                          <bool>false</bool>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(210, 25, 50);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_31">
+                     <item>
+                      <widget class="QLabel" name="label_31">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>더블클릭 선</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_32">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>두 번 연속으로 클릭하는 선 (점선)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_12">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_32">
+                       <item>
+                        <widget class="QPushButton" name="rs_color_d">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="autoFillBackground">
+                          <bool>false</bool>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(20,45, 225);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_33">
+                     <item>
+                      <widget class="QLabel" name="label_34">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>선 두께</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_35">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>움직이는 선의 두께</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_13">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_34">
+                       <item>
+                        <widget class="QSpinBox" name="rs_guideline_thickness">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QSpinBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}</string>
+                         </property>
+                         <property name="suffix">
+                          <string> pt</string>
+                         </property>
+                         <property name="minimum">
+                          <number>1</number>
+                         </property>
+                         <property name="maximum">
+                          <number>50</number>
+                         </property>
+                         <property name="value">
+                          <number>20</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_35">
+                     <item>
+                      <widget class="QLabel" name="label_36">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>선 투명도</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_37">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>선의 투명도 (100%는 투명)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_14">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_36">
+                       <item>
+                        <widget class="QSpinBox" name="rs_line_opacity">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QSpinBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}</string>
+                         </property>
+                         <property name="suffix">
+                          <string> %</string>
+                         </property>
+                         <property name="minimum">
+                          <number>0</number>
+                         </property>
+                         <property name="maximum">
+                          <number>100</number>
+                         </property>
+                         <property name="value">
+                          <number>0</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="Line" name="line_5">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame{
+	color: #f6f6f6;
+}</string>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
+                     </property>
+                     <property name="lineWidth">
+                      <number>10</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_38">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>SUIT SemiBold</family>
+                       <pointsize>16</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;키 설정&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_37">
+                     <item>
+                      <widget class="QLabel" name="label_39">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>입력 키</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_40">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>스위치가 입력하는 키 종류</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_15">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_38">
+                       <item>
+                        <widget class="QComboBox" name="rs_input_key">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    width: 15px;
+	heigt: 15px;
+	image: url(:/myicon/icons/arrow.png);
+}</string>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>10</width>
+                           <height>11</height>
+                          </size>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>f4</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>insert</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>home</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>f13</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>f14</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>f15</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>f16</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_39">
+                   <item>
+                    <widget class="QLabel" name="label_41">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>120</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>SUIT ExtraBold</family>
+                       <pointsize>18</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="text">
+                      <string>변경 키</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="indent">
+                      <number>10</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_42">
+                     <property name="minimumSize">
+                      <size>
+                       <width>250</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>300</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>SUIT Medium</family>
+                       <pointsize>12</pointsize>
+                       <weight>50</weight>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="text">
+                      <string>일반클릭-더블클릭 변경 키</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                     </property>
+                     <property name="indent">
+                      <number>10</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_16">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>100</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_40">
+                     <item>
+                      <widget class="QComboBox" name="rs_change_key">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>35</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QComboBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    width: 15px;
+	heigt: 15px;
+	image: url(:/myicon/icons/arrow.png);
+}</string>
+                       </property>
+                       <property name="currentText">
+                        <string>home</string>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>10</width>
+                         <height>11</height>
+                        </size>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>home</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>f4</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>insert</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>end</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>pause</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_41">
+                   <item>
+                    <widget class="QLabel" name="label_43">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>120</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>SUIT ExtraBold</family>
+                       <pointsize>18</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="text">
+                      <string>종료 키</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="indent">
+                      <number>10</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_44">
+                     <property name="minimumSize">
+                      <size>
+                       <width>250</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>300</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>SUIT Medium</family>
+                       <pointsize>12</pointsize>
+                       <weight>50</weight>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="text">
+                      <string>프로그램 종료 키</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                     </property>
+                     <property name="indent">
+                      <number>10</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_17">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>100</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_42">
+                     <item>
+                      <widget class="QComboBox" name="rs_exit_key">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>35</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QComboBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    width: 15px;
+	heigt: 15px;
+	image: url(:/myicon/icons/arrow.png);
+}</string>
+                       </property>
+                       <property name="currentText">
+                        <string>esc</string>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>10</width>
+                         <height>11</height>
+                        </size>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>esc</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>f4</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>insert</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>home</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>pause</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>end</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="xy_scan">
+         <attribute name="icon">
+          <iconset>
+           <normaloff>icons/xys_g.png</normaloff>icons/xys_g.png</iconset>
+         </attribute>
+         <attribute name="title">
+          <string>  지점스캔</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_16">
+          <item>
+           <widget class="QFrame" name="xy_scan_frame">
+            <property name="minimumSize">
+             <size>
+              <width>721</width>
+              <height>401</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #f6f6f6</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <widget class="QLabel" name="label_45">
+               <property name="font">
+                <font>
+                 <family>SUIT SemiBold</family>
+                 <pointsize>28</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>ArrowCursor</cursorShape>
+               </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;지점스캔&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QScrollArea" name="scrollArea_rs_2">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>335</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QScrollArea{
+	border: 0pt;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: #343B48;
+	border-radius: 5px;
+}
+
+QScrollBar:vertical {
+	background:  #343B48;
+	width:10px;    
+    margin: 0px;
+	border-radius: 5px;
+
+}
+
+ QScrollBar::handle:vertical {         
+	min-height: 0px;
+	border-radius: 5px;
+	background-color: #2e7ac6;
+}
+
+QScrollBar::add-line:vertical {       
+	height: 0px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+	border-radius: 5px;
+}
+
+QScrollBar::sub-line:vertical {
+	height: 0 px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+	border-radius: 5px;
+}</string>
+               </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="widgetResizable">
+                <bool>true</bool>
+               </property>
+               <widget class="QWidget" name="scrollAreaWidgetContents_4">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>843</width>
+                  <height>764</height>
+                 </rect>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_12">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_13">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_68">
+                     <item>
+                      <widget class="QLabel" name="label_72">
+                       <property name="minimumSize">
+                        <size>
+                         <width>120</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>동작방식</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_73">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>반응할 스위치의 동작</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_30">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_69">
+                       <item>
+                        <widget class="QRadioButton" name="xys_switch_press">
+                         <property name="font">
+                          <font>
+                           <family>SUIT Light</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>스위치를 누를 때</string>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>16</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                         <property name="checked">
+                          <bool>true</bool>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QRadioButton" name="xys_switch_release">
+                         <property name="font">
+                          <font>
+                           <family>SUIT Light</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+}</string>
+                         </property>
+                         <property name="text">
+                          <string>스위치를 뗄 때</string>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>16</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_72">
+                     <item>
+                      <widget class="QLabel" name="label_76">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>이동속도</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_77">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>선이 움직이는 속도</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_32">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_73">
+                       <item>
+                        <widget class="QComboBox" name="xys_move_wait">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    width: 15px;
+	heigt: 15px;
+	image: url(:/myicon/icons/arrow.png);
+}</string>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>10</width>
+                           <height>11</height>
+                          </size>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>아주 빠르게</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>빠르게</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>천천히</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>아주 천천히</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_74">
+                     <item>
+                      <widget class="QLabel" name="label_78">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>가로선 이동 횟수</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_79">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>회전 횟수 (0은 무한)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_33">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>70</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_75">
+                       <item>
+                        <widget class="QSpinBox" name="xys_y_time">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QSpinBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}</string>
+                         </property>
+                         <property name="suffix">
+                          <string> 번</string>
+                         </property>
+                         <property name="minimum">
+                          <number>0</number>
+                         </property>
+                         <property name="maximum">
+                          <number>30</number>
+                         </property>
+                         <property name="value">
+                          <number>3</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_76">
+                     <item>
+                      <widget class="QLabel" name="label_80">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>세로선 이동 횟수</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_81">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>선을 따라 움직이는 횟수 (0은 무한)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_34">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>70</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_77">
+                       <item>
+                        <widget class="QSpinBox" name="xys_x_time">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QSpinBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}</string>
+                         </property>
+                         <property name="suffix">
+                          <string> 번</string>
+                         </property>
+                         <property name="minimum">
+                          <number>0</number>
+                         </property>
+                         <property name="maximum">
+                          <number>30</number>
+                         </property>
+                         <property name="value">
+                          <number>4</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="Line" name="line_8">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame{
+	color: #f6f6f6;
+}</string>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
+                     </property>
+                     <property name="lineWidth">
+                      <number>10</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_82">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>SUIT SemiBold</family>
+                       <pointsize>16</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;선 스타일&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_78">
+                     <item>
+                      <widget class="QLabel" name="label_83">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>일반클릭 선</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_84">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>한 번만 클릭하는 선 (실선)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_35">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_79">
+                       <item>
+                        <widget class="QPushButton" name="xys_color">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="autoFillBackground">
+                          <bool>false</bool>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(210, 25, 50);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_80">
+                     <item>
+                      <widget class="QLabel" name="label_85">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>더블클릭 선</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_86">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>두 번 연속으로 클릭하는 선 (점선)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_36">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_81">
+                       <item>
+                        <widget class="QPushButton" name="xys_color_d">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="autoFillBackground">
+                          <bool>false</bool>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(20,45, 225);</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_82">
+                     <item>
+                      <widget class="QLabel" name="label_87">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>선 두께</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_88">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>움직이는 선의 두께</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_37">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_83">
+                       <item>
+                        <widget class="QSpinBox" name="xys_guideline_thickness">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QSpinBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}</string>
+                         </property>
+                         <property name="suffix">
+                          <string> pt</string>
+                         </property>
+                         <property name="minimum">
+                          <number>1</number>
+                         </property>
+                         <property name="maximum">
+                          <number>50</number>
+                         </property>
+                         <property name="value">
+                          <number>20</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_84">
+                     <item>
+                      <widget class="QLabel" name="label_89">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>선 투명도</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_90">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>선의 투명도 (100%는 투명)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_38">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="xys_line_opacity">
+                       <item>
+                        <widget class="QSpinBox" name="rs_rotate_time_15">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QSpinBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}</string>
+                         </property>
+                         <property name="suffix">
+                          <string> %</string>
+                         </property>
+                         <property name="minimum">
+                          <number>0</number>
+                         </property>
+                         <property name="maximum">
+                          <number>100</number>
+                         </property>
+                         <property name="value">
+                          <number>0</number>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <widget class="Line" name="line_9">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame{
+	color: #f6f6f6;
+}</string>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
+                     </property>
+                     <property name="lineWidth">
+                      <number>10</number>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_91">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>SUIT SemiBold</family>
+                       <pointsize>16</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;키 설정&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_86">
+                     <item>
+                      <widget class="QLabel" name="label_92">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT ExtraBold</family>
+                         <pointsize>18</pointsize>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>입력 키</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="label_93">
+                       <property name="minimumSize">
+                        <size>
+                         <width>250</width>
+                         <height>50</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>300</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="text">
+                        <string>스위치가 입력하는 키 종류</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                       </property>
+                       <property name="indent">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_39">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>100</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_87">
+                       <item>
+                        <widget class="QComboBox" name="xys_input_key">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>SUIT Medium</family>
+                           <pointsize>12</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    width: 15px;
+	heigt: 15px;
+	image: url(:/myicon/icons/arrow.png);
+}</string>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>10</width>
+                           <height>11</height>
+                          </size>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>f4</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>insert</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>home</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>f13</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>f14</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>f15</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>f16</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_88">
+                   <item>
+                    <widget class="QLabel" name="label_94">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>120</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>SUIT ExtraBold</family>
+                       <pointsize>18</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="text">
+                      <string>변경 키</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="indent">
+                      <number>10</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_95">
+                     <property name="minimumSize">
+                      <size>
+                       <width>250</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>300</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>SUIT Medium</family>
+                       <pointsize>12</pointsize>
+                       <weight>50</weight>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="text">
+                      <string>일반클릭-더블클릭 변경 키</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                     </property>
+                     <property name="indent">
+                      <number>10</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_40">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>100</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_89">
+                     <item>
+                      <widget class="QComboBox" name="xys_change_key">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>35</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QComboBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    width: 15px;
+	heigt: 15px;
+	image: url(:/myicon/icons/arrow.png);
+}</string>
+                       </property>
+                       <property name="currentText">
+                        <string>home</string>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>10</width>
+                         <height>11</height>
+                        </size>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>home</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>f4</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>insert</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>end</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>pause</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_90">
+                   <item>
+                    <widget class="QLabel" name="label_96">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>120</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>SUIT ExtraBold</family>
+                       <pointsize>18</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="text">
+                      <string>종료 키</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="indent">
+                      <number>10</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_97">
+                     <property name="minimumSize">
+                      <size>
+                       <width>250</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>300</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>SUIT Medium</family>
+                       <pointsize>12</pointsize>
+                       <weight>50</weight>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
+                     </property>
+                     <property name="text">
+                      <string>프로그램 종료 키</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                     </property>
+                     <property name="indent">
+                      <number>10</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_41">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>100</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_91">
+                     <item>
+                      <widget class="QComboBox" name="xys_exit_key">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>35</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>SUIT Medium</family>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QComboBox {
+	background-color: #1B1D23;
+	border: 0px;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    width: 15px;
+	heigt: 15px;
+	image: url(:/myicon/icons/arrow.png);
+}</string>
+                       </property>
+                       <property name="currentText">
+                        <string>esc</string>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>10</width>
+                         <height>11</height>
+                        </size>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>esc</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>f4</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>insert</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>home</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>pause</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>end</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>450</y>
+          <width>881</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="return_default_btn">
+           <property name="minimumSize">
+            <size>
+             <width>82</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>SUIT Medium</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>  수정한 값을 초기화합니다.</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+
+QPushButton {
+	border: 0.5px solid #f6f6f6;
+    border-radius: 3px;
+    background-color: #272C36;
+    min-width: 80px;
+	color: rgb(246, 246, 246);
+}
+QPushButton:hover{
+	background-color: #474C56;
+}
+
+QPushButton:pressed {
+    background-color: #373C46;
+}
+
+</string>
+           </property>
+           <property name="text">
+            <string>기본값</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="save_btn">
+           <property name="minimumSize">
+            <size>
+             <width>82</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>SUIT Medium</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="toolTip">
+            <string>  수정한 값을 저장합니다.</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+
+QPushButton {
+	border: 0.5px solid #f6f6f6;
+    border-radius: 3px;
+    background-color: #272C36;
+    min-width: 80px;
+	color: rgb(246, 246, 246);
+}
+QPushButton:hover{
+	background-color: #474C56;
+}
+
+QPushButton:pressed {
+    background-color: #373C46;
+}
+
+</string>
+           </property>
+           <property name="text">
+            <string>저장</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>470</y>
+      <width>2</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_45"/>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>exit_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>exit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>787</x>
+     <y>18</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>780</x>
+     <y>16</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>minimize_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>minimize()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>722</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>642</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>save_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>save()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>712</x>
+     <y>511</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>754</x>
+     <y>539</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>return_default_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>return_default()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>622</x>
+     <y>508</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>634</x>
+     <y>539</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rs_color</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>rs_color()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>699</x>
+     <y>300</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>815</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rs_color_d</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>rs_color_d()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>689</x>
+     <y>362</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>819</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>xys_color</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>xys_color()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>685</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>821</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>xys_color_d</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>xys_color_d()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>681</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>845</x>
+     <y>271</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>exit()</slot>
+  <slot>maximize()</slot>
+  <slot>minimize()</slot>
+  <slot>save()</slot>
+  <slot>return_default()</slot>
+  <slot>rs_color()</slot>
+  <slot>rs_color_d()</slot>
+  <slot>xys_color()</slot>
+  <slot>xys_color_d()</slot>
+ </slots>
+</ui>
