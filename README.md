@@ -13,3 +13,5 @@ setting_ui_modified.py 파일의 대부분은 .ui파일을 .py 파일로 변환�
 기타 수정사항은 .ui파일을 .py 파일로 변환시키고 오류가 난다면 해당 부분을 확인해주세요.
 <br><br>
 setting.ui 파일은 qtdesigner에서 작업할 수 있습니다.
+<br>
+프로그램을 통하지 않고 값을 수정하려면, <a href="https://handh0.tistory.com/4">이 내용</a>을 참고해서 직접 수정할 수 있습니다.
